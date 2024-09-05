@@ -1,10 +1,11 @@
 document.getElementById("menu-toggle").addEventListener("click", function() {
-    var menu = document.getElementById("side-menu");
-    var menuIcon = document.getElementById("menu-icon");
+    const menu = document.getElementById("side-menu");
+    const menuIcon = document.getElementById("menu-icon");
 
     // Bascule l'état du menu
     menu.classList.toggle("open");
     
+
     // Change l'icône en fonction de l'état du menu
     if (menu.classList.contains("open")) {
         menuIcon.src = "img/svg/close.svg"; // Remplace par l'icône de croix

@@ -3,7 +3,7 @@
     --color-link-second: #fff;
     --color-background-dark: #2b293d;
     --color-background-darker: #1c1a26;
-    --color-border-light: #b7b7b7;
+    --color-border-light: #b7b7b77a;
     --color-border-hover: #2b293d;
     --color-text-dark: #16141e;
 }
@@ -27,10 +27,12 @@ ul {
     margin: 0;
 }
 
-body, p, h1, h2, h3, ul a, .section_lien_bas_page ul li {
+body, p, h1, h2, h3, ul a {
     color: var(--color-principal);
 }
-
+.section_lien_bas_page ul li{
+    color: var(--color-link-second);
+}
 ul a {
     text-decoration: none;
     color: var(--color-link-second);
@@ -107,7 +109,7 @@ ul a:hover {
 
 /* ==============telecharger app store google play=============== */
 .section_contenu_principal_right p{
-
+    color: #fff;
 }
 
 .section_contenu_principal_right ul li {
@@ -158,4 +160,94 @@ ul a:hover {
     margin-right: 0.5rem;
     background-color: var(--color-link-second);
     border-radius: 50%;
+}
+
+
+
+@media (max-width : 768px){
+    html, footer, body{
+        width: 100vh;
+        font-size: 18px;
+    }
+
+
+    .section_contenu_principal{
+        padding: 2rem 4rem 2rem 1.4rem;
+    }
+
+    .section_contenu_principal{
+        flex-direction: column;
+    }
+
+    .section_contenu_principal_left{
+        width: 100%;
+    }
+    
+    .section_reseauxsociaux ul{
+        margin: 1rem 0 1rem 1rem;
+    }
+
+    .section_reseauxsociaux ul li{
+        margin-right: 0.5rem;
+    }
+
+    .section_reseauxsociaux p{
+        font-size: 18px;
+    }
+
+    .section_contenu_principal_right{
+        margin-top: 2rem;
+    }
+
+    .img_telechargement{
+        flex-direction: column;
+    }
+
+    .section_lien_bas_page{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    
+    .footer__bottom-links-list{
+        flex-wrap: wrap;
+
+    }
+    
+    .footer__bottom-links-item{
+        width: 36%;
+        margin-bottom: 1rem;
+    }
+    
+    .section_lien_bas_page ul{
+        justify-content: left;
+        margin-left: 1rem;;
+    }
+
+    .section_site_groupe{
+        justify-content: start;
+        flex-direction: column;
+    }
+}
+
+@media (max-width : 400px){
+    footer{
+        font-size: 2em;
+    }
+    .section_reseauxsociaux, .section_contenu_principal_left, .section_site_groupe .footer__bottom-links-list{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .section_contenu_principal_left div{
+        margin-bottom: 2em;
+    }
+
+    .section_site_groupe .footer__bottom-links-list{
+        margin: 1em 0 2em 1em;
+    }
+    .section_site_groupe .footer__bottom-links-list img{
+        width: 2em;
+
+    }
 }

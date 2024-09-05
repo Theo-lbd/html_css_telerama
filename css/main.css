@@ -613,3 +613,8 @@ padding: 5px;
 .dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode p{
     color: #fff;
 }
+
+
+@media (max-width : 768px){
+    
+}

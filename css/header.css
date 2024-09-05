@@ -6,9 +6,9 @@
     --color-text-hover: #737278;
     --color-accent: #ffe047;
     --color-accent-hover: #fe9;
-    --color-dark-mode-background: #222;
+    --color-dark-mode-background: #dad9db;
     --color-dark-mode-shadow: #ffffff33;
-    --color-dark-mode-btn-background: #666666;
+    --color-dark-mode-btn-background: #dad9db;
 }
 @font-face {
     font-family: 'Graphik_Regular';
@@ -24,7 +24,7 @@
 
 header {
     background-color: var(--color-background-light);
-    height: 4rem;
+    height: 5rem;
     width: 100%;
     display: block;
     font-size: 1rem;
@@ -65,8 +65,8 @@ ul {
     cursor: pointer;
     padding: 10px;
     position: fixed;
-    top: 10px;
-    left: 10px;
+    top: 20px;
+    left: 50px;
     z-index: 1000;
 }
 
@@ -112,6 +112,33 @@ ul {
     left: 0;
 }
 
+.wrapper .btn{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+}
+.sombre{
+    display: flex;
+    align-items: center;
+
+}
+
+.sombre img{
+    height: 10%;
+    margin-right: 0.5em;
+}
+
+.p_sombre{
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.dark-mode #img_darkmode{
+    content: url(../img/svg/darkmode.svg);
+}
+
 /* ===section menu=== */
 
 nav p {
@@ -127,9 +154,10 @@ nav p {
 /* ==darkModeButton== */
 
 .btn input[type="checkbox"] {
+    background-color: #dad9db;
     position: relative;
-    width: 80px;
-    height: 40px;
+    width: 55px;
+    height: 35px;
     appearance: none;
     outline: none;
     border-radius: 20px;
@@ -148,8 +176,8 @@ nav p {
 .btn input[type="checkbox"]::before {
     content: "";
     position: absolute;
-    width: 36px;
-    height: 36px;
+    width: 31px;
+    height: 31px;
     border-radius: 50%;
     top: 2px;
     left: 2px;
@@ -160,10 +188,10 @@ nav p {
 }
 
 .btn input:checked[type="checkbox"]::before {
-    background: linear-gradient(to bottom, #444, #222);
+    background: #ffffff;
     box-shadow: inset 0 2px 2px var(--color-dark-mode-shadow),
                 inset 0 -2px 2px var(--color-dark-mode-shadow);
-    transform: translateX(40px);
+    transform: translateX(21px);
 }
 
 .dark-mode {
@@ -192,18 +220,27 @@ nav p {
     color: var(--color-background-light);
 }
 
-/* Autres styles pour les éléments spécifiques */
-.dark-mode .wrapper .btn {
-    background-color: var(--color-dark-mode-btn-background);
-}
 
-/*=====Logo DarkMode=====*/
-#logo {
-    content: url('img/icon-telerama.png');
-}
+/*=====Logo / img DarkMode=====*/
 
 .dark-mode #logo {
-    content: url('img/icon-telerama-dark.png');
+    content: url('../img/icon-telerama-dark.png');
+}
+
+.dark-mode #img_tv{
+    content: url('../img/svg/tv_white.svg');
+}
+
+.dark-mode #prog_tv{
+    content: url('../img/svg/programe_tv_white.svg');
+}
+
+.dark-mode #menu-icon{
+    content: url('../img/svg/menu_dark.svg');
+}
+
+.dark-mode #menu-icon.open {
+    content: url('../img/svg/close_dark.svg');
 }
 
 /* ===========section header============ */
@@ -222,7 +259,6 @@ nav p {
 
 .section_header_left a img {
     width: 40%;
-    vertical-align: middle;
     margin-left: 2rem;
 }
 
@@ -322,4 +358,33 @@ nav p {
 .nav_category a {
     text-decoration: none;
     color: black;
+}
+
+@media (max-width : 768px){
+    header, a, .ul_nav a {
+        font-size: 12px;
+    }
+    .menu-toggle{
+        left: 10px;
+        top: 30px;
+    }
+    
+    .section_header_left a img{
+        margin-left: -3em;
+        width: 50%;
+    }
+
+    .section_left section{
+        display: flex;
+    }
+
+    .section_left a{
+        margin: auto 2em auto 0;
+    }
+    a.link_subscribe{
+        margin-right: 0;
+    }
+    .ul_nav, .fa-magnifying-glass{
+        display: none;
+    }
 }
