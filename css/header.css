@@ -72,7 +72,7 @@ ul {
 
 .side-menu {
     position: fixed;
-    top: 5.6rem;
+    top: 5rem;
     left: -500px;
     width: 400px;
     height: 90%;
@@ -275,6 +275,10 @@ nav p {
     color: var(--color-text-dark);
 }
 
+.button_search i {
+    margin-right: 2em;
+}
+
 .button_menu i:hover,
 .programme_tv_link:hover,
 .magazine_link:hover,
@@ -360,7 +364,7 @@ nav p {
     color: black;
 }
 
-@media (max-width : 768px){
+@media (max-width : 1200px){
     header, a, .ul_nav a {
         font-size: 12px;
     }

@@ -164,7 +164,7 @@ ul a:hover {
 
 
 
-@media (max-width : 768px){
+@media (max-width : 1200px){
     html, footer, body{
         width: 100vh;
         font-size: 18px;
